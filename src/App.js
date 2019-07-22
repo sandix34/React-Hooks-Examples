@@ -1,10 +1,11 @@
 import React from 'react';
+import Like from './components/Like';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>React Hooks</h1>
+        <Like/>
       </header>
     </div>
   );
