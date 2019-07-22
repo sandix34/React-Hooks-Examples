@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { link } from 'fs';
 
 const FrameworkList = () => {
 
@@ -34,6 +35,18 @@ const FrameworkList = () => {
                 onChange={e => setFrameworkName(e.target.value)}/>
                 <button type="submit">add</button>
             </form>
+            <hr/>
+            {
+                (frameworks.length === 0) ? (
+                    <h2>NoFrameworks</h2>
+                ) : (
+                    <ul>
+                        {
+                            frameworks.map(fwk => <li key={fwk.id}>{fwk.name}</li>)
+                        }
+                    </ul>
+                )
+            }
         </div>
      );
 }
