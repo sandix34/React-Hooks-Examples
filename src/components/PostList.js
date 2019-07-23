@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import { directive } from '@babel/types';
 
 const PostList = () => {
 
@@ -13,8 +14,13 @@ const PostList = () => {
             })
     }, [])
 
-    return ( 
+    return (
+        <> 
         <h2>Post List</h2>
+        {
+            posts.length > 0 && posts.map(p => <div key={p.id}>{p.title}</div>)
+        }
+        </>
      );
 }
  
