@@ -4,6 +4,7 @@ import FrameworkList from './components/FrameworkList';
 import PostList from './components/PostList';
 import Calculator from './components/Calculator';
 import LevelA from './components/LevelA';
+import MailContextProvider from './contexts/MailContext';
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
         <FrameworkList/>
         <PostList/>
         <Calculator/>
-        <LevelA/>
+        <MailContextProvider>
+          <LevelA/>
+        </MailContextProvider>
+        
       </header>
     </div>
   );
