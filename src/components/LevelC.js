@@ -15,7 +15,7 @@ const LevelC = () => {
                 {
                     messages.length > 0 ? (
                         <ul>
-                            {messages.map(msg => <li key={msg.id}>{msg.title}</li>)}
+                            {messages.map(msg => <li key={msg.id}>{msg.title} <button onClick={() => deleteMessage(msg)}>delete</button></li>)}
                         </ul>
                     ) : (
                         <h3>no messages</h3>
