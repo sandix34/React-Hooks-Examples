@@ -1,17 +1,20 @@
 import React, { createContext, useState } from 'react';
-import { tsPropertySignature } from '@babel/types';
 
 export const MailContext = createContext();
 
 const MailContextProvider = (props) => {
 
     const [messages, setMessages] = useState([
-        { id: 1, tutle: "Birthday party", content: "Come and bring a bottle"},
-        { id: 2, tutle: "This is a spam", content: "We want to sell you something"}
-    ])
+        { id: 1, title: "Birthday party", content: "Come and bring a bottle"},
+        { id: 2, title: "This is a spam", content: "We want to sell you something"}
+    ]);
+
+    const deleteMessage = (message) => {
+        setMessages(messages.filter(msg => msg.id !== message.id));
+    }
 
     return ( 
-        <MailContext.Provider value={messages}>
+        <MailContext.Provider value={{messages: messages, deleteMessage: deleteMessage}}>
             {props.children}
         </MailContext.Provider>
      );

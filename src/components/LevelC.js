@@ -4,13 +4,23 @@ import { MailContext } from '../contexts/MailContext'
 
 const LevelC = () => {
 
-    const messages = useContext(MailContext);
+    const {messages, deleteMessage} = useContext(MailContext);
 
     return ( 
         <div className="level-c">
             <h1>Level C</h1>
             <div>
                 Level A directly passed {messages.length} messages
+                <hr/>
+                {
+                    messages.length > 0 ? (
+                        <ul>
+                            {messages.map(msg => <li key={msg.id}>{msg.title}</li>)}
+                        </ul>
+                    ) : (
+                        <h3>no messages</h3>
+                    )
+                }
             </div>
         </div>
      );
