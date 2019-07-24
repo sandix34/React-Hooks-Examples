@@ -2,6 +2,7 @@ import React from 'react';
 import Like from './components/Like';
 import FrameworkList from './components/FrameworkList';
 import PostList from './components/PostList';
+import Calculator from './components/Calculator';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Like/>
         <FrameworkList/>
         <PostList/>
+        <Calculator/>
       </header>
     </div>
   );
