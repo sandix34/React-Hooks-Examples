@@ -5,6 +5,7 @@ import PostList from './components/PostList';
 import Calculator from './components/Calculator';
 import LevelA from './components/LevelA';
 import MailContextProvider from './contexts/MailContext';
+import Keycode from './components/Keycode';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <MailContextProvider>
           <LevelA/>
         </MailContextProvider>
+        <Keycode/>
         
       </header>
     </div>
