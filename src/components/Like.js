@@ -1,5 +1,6 @@
 // les hooks sont toujours préfixés de 'use...'
 import React, { useState } from "react";
+import Prism from "prismjs";
 import { Row, Col } from "antd";
 
 const Like = () => {
@@ -12,11 +13,34 @@ const Like = () => {
       <Row type="flex" justify="space-around" align="middle">
         <Col span={4}>
           {nbIfLikes}
-          <button className="button-like" onClick={() => setNbOfLikes(nbIfLikes + 1)}>
+          <button
+            className="button-like"
+            onClick={() => setNbOfLikes(nbIfLikes + 1)}
+          >
             Likes
           </button>
         </Col>
-            ici le code
+        <pre>
+          <code className="language-javascript">
+            {`
+                  import React, { useState } from 'react';
+
+                  const Like = () => {
+              
+                     let [nbIfLikes, setNbOfLikes] = useState(0); // valeur initiale
+                 
+                      return ( 
+                         <div>
+                             {nbIfLikes}
+                             <button onClick={() => setNbOfLikes(nbIfLikes + 1)}>Like</button>
+                         </div>
+                      );
+                  }
+                 
+                  export default Like;
+                `}
+          </code>
+        </pre>
         <Col span={4} />
       </Row>
     </div>

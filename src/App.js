@@ -9,6 +9,9 @@ import Keycode from "./components/Keycode";
 import Login from "./components/Login";
 
 import { Collapse } from "antd";
+import { Layout } from 'antd';
+
+const { Header, Content } = Layout;
 
 const { Panel } = Collapse;
 
@@ -18,9 +21,14 @@ function callback(key) {
 
 function App() {
   return (
-    <div className="App">
+    <div>
+      <Layout>
+        <Header style={{"color": "white"}}>
+          React Hooks Examples 
+        </Header>
+        <Content>
         <Collapse defaultActiveKey={["1"]} onChange={callback}>
-          <Panel header="This is panel header 1" key="1">
+          <Panel header="Utiliser le hook useState() pour incrémenter" key="1">
             <Like />
           </Panel>
           <Panel header="This is panel header 2" key="2">
@@ -44,6 +52,8 @@ function App() {
             <Login />
           </Panel>
         </Collapse>
+        </Content>
+      </Layout>
     </div>
   );
 }
