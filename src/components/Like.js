@@ -1,6 +1,7 @@
 // les hooks sont toujours préfixés de 'use...'
 import React, { useState } from "react";
 import Prism from "prismjs";
+import '../prism.css'
 import { Row, Col } from "antd";
 
 const Like = () => {
@@ -41,7 +42,6 @@ const Like = () => {
                 `}
           </code>
         </pre>
-        <Col span={4} />
       </Row>
     </div>
   );
