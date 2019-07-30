@@ -39,7 +39,7 @@ function App() {
           <Panel forceRender="true" header="Utiliser useEffect() pour effectuer une requête AJAX -- Itérer les blog posts -- Afficher un indicateur de loading -- 1 useEffect() par fonctionnalité " key="3">
             <PostList />
           </Panel>
-          <Panel forceRender="true" header="This is panel header 4" key="4">
+          <Panel forceRender="true" header="Création d'un component et de son reducer -- Dispatcher des actions" key="4">
             <Calculator />
           </Panel>
           <Panel forceRender="true" header="This is panel header 5" key="5">

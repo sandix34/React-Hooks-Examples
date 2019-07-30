@@ -65,7 +65,6 @@ const PostList = () => {
                                 .then(result => {
                                     setPosts(result.data);
                                 })
-                        }, [])
                         }, []);
                     
                         useEffect(() => {
