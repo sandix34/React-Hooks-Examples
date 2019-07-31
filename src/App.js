@@ -8,6 +8,8 @@ import MailContextProvider from "./contexts/MailContext";
 import Keycode from "./components/Keycode";
 import Login from "./components/Login";
 
+import GithubCorner from 'react-github-corner';
+
 
 
 import { Collapse } from "antd";
@@ -27,6 +29,7 @@ function App() {
       <Layout>
         <Header>
           <h1 style={{"color": "white"}}>React Hooks Examples</h1> 
+          <GithubCorner href="https://github.com/sandix34/React-Hooks-Examples" bannerColor="#f5f2f0" octoColor="blue"/>
         </Header>
         <Content style={{"margin": "1rem"}}>
         <Collapse style={{"padding": "1rem"}} defaultActiveKey={["1"]} onChange={callback}>
@@ -52,10 +55,10 @@ function App() {
             </MailContextProvider>
           </Panel>
           <h3>Interraction avec le DOM et useRef()</h3>
-          <Panel forceRender="true" header="This is panel header 6" key="6">
+          <Panel forceRender="true" header="S'abonner et se désabonner à l'écoute d'évènements clavier" key="6">
             <Keycode />
           </Panel>
-          <Panel forceRender="true" header="This is panel header 7" key="7">
+          <Panel forceRender="true" header="Gérer le focus à l'aide de useRef()" key="7">
             <Login />
           </Panel>
         </Collapse>
